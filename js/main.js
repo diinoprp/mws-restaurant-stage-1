@@ -32,7 +32,7 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
-  select.setAttribute('label', 'Select neighborhood');
+  select.setAttribute('aria-label', 'Select neighborhood');
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.setAttribute('label', neighborhood);
@@ -169,7 +169,7 @@ createRestaurantHTML = (restaurant) => {
   image.setAttribute('alt', restaurant.name);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
